@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Friendly.FarPoint</name>
+    </assembly>
+    <members>
+        <member name="T:Friendly.FarPoint.CellDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Cell.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.Column">
+            <summary>
+            Column's Driver.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.Row">
+            <summary>
+            Row's Driver.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.Text">
+            <summary>
+            Text.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.App">
+            <summary>
+            Returns the associated application manipulation object.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellDriver.Size">
+            <summary>
+            Returns the size of IUIObject.
+            </summary>
+        </member>
+        <member name="M:Friendly.FarPoint.CellDriver.PointToScreen(System.Drawing.Point)">
+            <summary>
+            Convert IUIObject's client coordinates to screen coordinates.
+            </summary>
+            <param name="clientPoint">client coordinates.</param>
+            <returns>screen coordinates.</returns>
+        </member>
+        <member name="M:Friendly.FarPoint.CellDriver.Activate">
+            <summary>
+            Make it active.
+            </summary>
+        </member>
+        <member name="T:Friendly.FarPoint.CellRangeDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Model.CellRange.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriver.Column">
+            <summary>
+            Column.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriver.ColumnCount">
+            <summary>
+            Column count.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriver.Row">
+            <summary>
+            Row.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriver.RowCount">
+            <summary>
+            Row count.
+            </summary>
+        </member>
+        <member name="T:Friendly.FarPoint.CellRangeDriverArray">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Model.CellRange[].
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriverArray.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriverArray.Length">
+            <summary>
+            Return count of array.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellRangeDriverArray.Item(System.Int32)">
+            <summary>
+            Return a element of index.
+            </summary>
+            <param name="index">Index.</param>
+            <returns>Element of array.</returns>
+        </member>
+        <member name="T:Friendly.FarPoint.CellsDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Cells.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellsDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.CellsDriver.Item(System.String)">
+            <summary>
+            Cell's Driver.
+            </summary>
+            <param name="tag">tag.</param>
+            <returns>SheetView's Driver.</returns>
+        </member>
+        <member name="P:Friendly.FarPoint.CellsDriver.Item(System.Int32,System.Int32)">
+            <summary>
+            Cell's Driver.
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <returns>SheetView's Driver.</returns>
+        </member>
+        <member name="P:Friendly.FarPoint.CellsDriver.Item(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Cell's Driver.
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="row2">row2.</param>
+            <param name="col2">col2.</param>
+            <returns>SheetView's Driver.</returns>
+        </member>
+        <member name="T:Friendly.FarPoint.ColumnDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Column.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.ColumnDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.ColumnDriver.Index">
+            <summary>
+            The index of this column or the start index of the column range.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.ColumnDriver.Index2">
+            <summary>
+            The end index of this column range.
+            </summary>
+        </member>
+        <member name="T:Friendly.FarPoint.FpSpreadDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.FpSpread.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.FpSpreadDriver.ActiveSheetIndex">
+            <summary>
+            Active sheet index.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.FpSpreadDriver.Sheets">
+            <summary>
+            SheetViewCollection's Driver.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.FpSpreadDriver.ActiveSheet">
+            <summary>
+            Active sheet.
+            </summary>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.#ctor(Codeer.Friendly.AppVar)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="appVar">Application variable object for the control.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateChangeActiveSheet(System.Int32)">
+            <summary>
+            Selects a certain sheet.
+            </summary>
+            <param name="index">Index (0-based) of the sheet to select.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateChangeActiveSheet(System.Int32,Codeer.Friendly.Async)">
+            <summary>
+            Selects a certain sheet.
+            Executes asynchronously. 
+            </summary>
+            <param name="index">Index (0-based) of the sheet to select.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditText(System.String,System.Boolean)">
+            <summary>
+            Modifies the text of a active cell.
+            </summary>
+            <param name="text">The text to use.</param>
+            <param name="formula">Exists formula.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditText(System.String,System.Boolean,Codeer.Friendly.Async)">
+            <summary>
+            Modifies the text of a active cell.
+            Executes asynchronously. 
+            </summary>
+            <param name="text">The text to use.</param>
+            <param name="formula">Exists formula.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditSelectedIndex(System.Int32)">
+            <summary>
+            Modifies the selected index of a active cell.
+            It is effective in cell's edit control has the SelectedIndex property.
+            (ComboBox)
+            </summary>
+            <param name="selectedIndex">selected index.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditSelectedIndex(System.Int32,Codeer.Friendly.Async)">
+            <summary>
+            Modifies the selected index of a active cell.
+            It is effective in cell's edit control has the SelectedIndex property.
+            (ComboBox)
+            Executes asynchronously. 
+            </summary>
+            <param name="selectedIndex">selected index.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditCheckState(System.Windows.Forms.CheckState)">
+            <summary>
+            Modifies the check state of a active cell.
+            It is effective in cell's edit control has the CheckState property.
+            (CheckBox)
+            </summary>
+            <param name="checkState"></param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditCheckState(System.Windows.Forms.CheckState,Codeer.Friendly.Async)">
+            <summary>
+            Modifies the check state of a active cell.
+            It is effective in cell's edit control has the CheckState property.
+            (CheckBox)
+            Executes asynchronously. 
+            </summary>
+            <param name="checkState">check state.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditValue(System.Object)">
+            <summary>
+            Modifies the value of a active cell.
+            It is effective in cell's edit control has the Value property.
+            </summary>
+            <param name="value">value.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateEditValue(System.Object,Codeer.Friendly.Async)">
+            <summary>
+            Modifies the value of a active cell.
+            It is effective in cell's edit control has the Value property.
+            Executes asynchronously. 
+            </summary>
+            <param name="value">value.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateButtonClick">
+            <summary>
+            Click cell button.
+            </summary>
+        </member>
+        <member name="M:Friendly.FarPoint.FpSpreadDriver.EmulateButtonClick(Codeer.Friendly.Async)">
+            <summary>
+            Click cell button.
+            </summary>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="T:Friendly.FarPoint.RowDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.Row.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.RowDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.RowDriver.Index">
+            <summary>
+            The index of this column or the start index of the column range.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.RowDriver.Index2">
+            <summary>
+            The end index of this column range.
+            </summary>
+        </member>
+        <member name="T:Friendly.FarPoint.SheetViewCollectionDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.SheetViewCollection.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewCollectionDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewCollectionDriver.Count">
+            <summary>
+            Return count of collection.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewCollectionDriver.Item(System.Int32)">
+            <summary>
+            SheetView's Driver.
+            </summary>
+            <param name="index">index.</param>
+            <returns>SheetView's Driver.</returns>
+        </member>
+        <member name="T:Friendly.FarPoint.SheetViewDriver">
+            <summary>
+            Provides operations on controls of type FarPoint.Win.Spread.SheetView.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewDriver.AppVar">
+            <summary>
+            Returns an AppVar for a .NET object for the corresponding window.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewDriver.Cells">
+            <summary>
+            Cells's Driver.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewDriver.ActiveCell">
+            <summary>
+            Active cell.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewDriver.FrozenRowCount">
+            <summary>
+            Count of frozen row.
+            </summary>
+        </member>
+        <member name="P:Friendly.FarPoint.SheetViewDriver.FrozenColumnCount">
+            <summary>
+            Count of frozen column.
+            </summary>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.GetSelections">
+            <summary>
+            Get selections.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateChangeActiveCell(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Selects a certain cell.
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="clearSelection">Is clear selection range.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateChangeActiveCell(System.Int32,System.Int32,System.Boolean,Codeer.Friendly.Async)">
+            <summary>
+            Selects a certain cell.
+            Executes asynchronously. 
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="clearSelection">Is clear selection range.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateClearSelection">
+            <summary>
+            Clear all selection in this sheet.
+            </summary>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateClearSelection(Codeer.Friendly.Async)">
+            <summary>
+            Clear all selection in this sheet.
+            Executes asynchronously. 
+            </summary>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateAddSelection(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add selection.
+            Executes asynchronously. 
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="rowCount">row count.</param>
+            <param name="columnCount">column count.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateAddSelection(System.Int32,System.Int32,System.Int32,System.Int32,Codeer.Friendly.Async)">
+            <summary>
+            Add selection.
+            Executes asynchronously. 
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="rowCount">row count.</param>
+            <param name="columnCount">column count.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateRemoveSelection(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Add selection.
+            Executes asynchronously. 
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="rowCount">row count.</param>
+            <param name="columnCount">column count.</param>
+        </member>
+        <member name="M:Friendly.FarPoint.SheetViewDriver.EmulateRemoveSelection(System.Int32,System.Int32,System.Int32,System.Int32,Codeer.Friendly.Async)">
+            <summary>
+            Remove selection.
+            Executes asynchronously. 
+            </summary>
+            <param name="row">row.</param>
+            <param name="col">col.</param>
+            <param name="rowCount">row count.</param>
+            <param name="columnCount">column count.</param>
+            <param name="async">Asynchronous execution.</param>
+        </member>
+    </members>
+</doc>

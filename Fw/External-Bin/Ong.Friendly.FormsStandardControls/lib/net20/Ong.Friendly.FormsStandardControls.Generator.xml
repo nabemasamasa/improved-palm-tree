@@ -1,0 +1,1137 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ong.Friendly.FormsStandardControls.Generator</name>
+    </assembly>
+    <members>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.CheckBoxAndTextCell">
+            <summary>
+            チェックボックス付きテキストセルクラス
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetOutputTextProperty">
+            <summary>
+            プロパティ/フィールドのドライバ用コード文字列を取得
+            </summary>
+            <returns>コード文字列</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetOutputTextMethod">
+            <summary>
+            メソッドのドライバ用コード文字列を取得
+            </summary>
+            <returns>コード文字列</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.SetPropertyGridView">
+            <summary>
+            プロパティ/フィールド一覧グリッドを設定
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.SetMethodGridView">
+            <summary>
+            メソッド一覧グリッドを設定
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetValue(System.Object)">
+            <summary>
+            対象オブジェクトの値を取得
+            </summary>
+            <param name="src">対象オブジェクト</param>
+            <returns>値</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetValueType(System.Object)">
+            <summary>
+            対象オブジェクトの値の型を取得
+            </summary>
+            <param name="src">対象オブジェクト</param>
+            <returns>型</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.SetVisibleRow(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            フィルタの内容に応じて行を表示するか決める
+            </summary>
+            <param name="grid">対象グリッド</param>
+            <param name="filterText">フィルタテキスト</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.AddColumnCheckText(System.String,System.Windows.Forms.DataGridView,System.Int32)">
+            <summary>
+            チェックボックス付きテキストカラムを追加
+            </summary>
+            <param name="text">カラムのラベル</param>
+            <param name="grid">追加先のグリッド</param>
+            <param name="width">幅</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.AddColumnText(System.String,System.Windows.Forms.DataGridView,System.Int32)">
+            <summary>
+            テキストカラムを追加
+            </summary>
+            <param name="text">カラムのラベル</param>
+            <param name="grid">追加先のグリッド</param>
+            <param name="width">幅</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.AddColumnCheck(System.String,System.Windows.Forms.DataGridView)">
+            <summary>
+            チェックボックスカラムを追加
+            </summary>
+            <param name="text">カラムのラベル</param>
+            <param name="grid">追加先のグリッド</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetPropertyList(System.Type,System.Collections.Generic.SortedDictionary{System.String,System.Object})">
+            <summary>
+            プロパティ/フィールド一覧を取得
+            </summary>
+            <param name="type">取得対象</param>
+            <param name="dst">出力先</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetMethodList(System.Type,System.Collections.Generic.SortedDictionary{System.String,System.Object})">
+            <summary>
+            メソッド一覧を取得
+            </summary>
+            <param name="type">取得対象</param>
+            <param name="dst">出力先</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.AddPropertyCode(System.String,System.Boolean,System.Boolean,System.Type)">
+            <summary>
+            プロパティ/フィールドのドライバ用コード文字列を作成
+            </summary>
+            <param name="name">プロパティ名</param>
+            <param name="isPublic">public属性を付けるか判定</param>
+            <param name="isSetter">Setterを付けるか判定</param>
+            <param name="type">対象オブジェクトの型</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.AddMethodCode(System.Reflection.MethodInfo,System.Boolean)">
+            <summary>
+            メソッドのドライバ用コード文字列を作成
+            </summary>
+            <param name="info">メソッド情報</param>
+            <param name="isPublic">public属性を付けるか判定</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.GetAliasName(System.Type)">
+            <summary>
+            型名のエイリアスを取得
+            </summary>
+            <param name="type">取得対象の型</param>
+            <returns>型名(取得できない場合はAppVar)</returns>
+        </member>
+        <member name="F:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.components">
+            <summary> 
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeDriverControl.InitializeComponent">
+            <summary> 
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeGeneratorControl.SetVisibleRow(System.Windows.Forms.DataGridView,System.String)">
+            <summary>
+            フィルタの内容に応じて行を表示するか決める
+            </summary>
+            <param name="grid">対象グリッド</param>
+            <param name="filterText">フィルタテキスト</param>
+        </member>
+        <member name="F:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeGeneratorControl.components">
+            <summary> 
+            必要なデザイナー変数です。
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeGeneratorControl.Dispose(System.Boolean)">
+            <summary> 
+            使用中のリソースをすべてクリーンアップします。
+            </summary>
+            <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeGeneratorControl.InitializeComponent">
+            <summary> 
+            デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+            コード エディターで変更しないでください。
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeSettingForm.GetOutputTextProperty">
+            <summary>
+            プロパティ/フィールドのドライバ用コード文字列を取得
+            </summary>
+            <returns>コード文字列</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeSettingForm.GetOutputTextMethod">
+            <summary>
+            メソッドのドライバ用コード文字列を取得
+            </summary>
+            <returns>コード文字列</returns>
+        </member>
+        <member name="F:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeSettingForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeSettingForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverCodeSettingForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner">
+            <summary>
+            Driver Designer.
+            </summary>
+        </member>
+        <member name="P:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.Priority">
+            <summary>
+            priority.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.CanDesign(System.Object)">
+            <summary>
+            can you design a driver for a given object?
+            </summary>
+            <param name="obj">obj.</param>
+            <returns>Can you design a driver for a given object?</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.CreateDriverClassName(System.Object)">
+            <summary>
+            create driver class name.
+            </summary>
+            <param name="coreObj">root.</param>
+            <returns>driver class name.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GetAttachExtensionClassCandidates(System.Object)">
+            <summary>
+            candidates of attach extension class.
+            </summary>
+            <param name="obj">obj.</param>
+            <returns>candidates of attach extension class.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GetAttachMethodCandidates(System.Object)">
+            <summary>
+            candidates of attach method.
+            </summary>
+            <param name="obj">obj.</param>
+            <returns>candidates of attach method.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GetIdentifyingCandidates(System.Object,System.Object)">
+            <summary>
+            candidate code to identify element.
+            </summary>
+            <param name="root">root.</param>
+            <param name="element">elemnet.</param>
+            <returns>candidate code to identify element.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GenerateCode(System.Object,Codeer.TestAssistant.GeneratorToolKit.DriverDesignInfo)">
+            <summary>
+            generate code.
+            </summary>
+            <param name="targetControl">root.</param>
+            <param name="info">information.</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GetDriverCode(System.Type,System.String,System.String,System.String)">
+            <summary>
+            ドライバ用コード作成
+            </summary>
+            <param name="targetType">対象オブジェクト</param>
+            <param name="driverName">ドライバ名</param>
+            <param name="propertyCode">プロパティ/フィールドのコード</param>
+            <param name="methodCode">メソッドのコード</param>
+            <returns>生成したコード</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.DriverDesigner.GetGeneratorCode(System.String,System.String,System.String[])">
+            <summary>
+            ジェネレータ用コード作成
+            </summary>
+            <param name="driverName">ドライバ名</param>
+            <param name="generatorName">ジェネレータ名</param>
+            <param name="targetEventName">追加するイベント名一覧</param>
+            <returns>生成したコード</returns>
+        </member>
+        <member name="F:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.TypeSelectForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.TypeSelectForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.TypeSelectForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.WinFormsDriverCreator">
+            <summary>
+            Generate WinForms driver.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.WinFormsDriverCreator.#ctor(System.CodeDom.Compiler.CodeDomProvider)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="dom">CodeDomProvider.</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.WinFormsDriverCreator.CreateDriver(System.Windows.Forms.Control)">
+            <summary>
+            Route control.
+            </summary>
+            <param name="root">CodeDomProvider.</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.CreateDriver.WinFormsDriverCreator.CreateControlDriver(System.Windows.Forms.Control)">
+            <summary>
+            Route control.
+            </summary>
+            <param name="root">CodeDomProvider.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsButtonGenerator">
+            <summary>
+            This class generates operation codes for FormsButton.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsButtonGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsButtonGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsButtonGenerator.ButtonClick(System.Object,System.EventArgs)">
+            <summary>
+            ボタン押下
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsCheckBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsCheckBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckBoxGenerator.CheckStateChanged(System.Object,System.EventArgs)">
+            <summary>
+            チェック状態が変わったときのイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsCheckedListBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator.ConvertChildClientPoint(System.Drawing.Point@,System.String@)">
+            <summary>
+            Convert from parent client coordinates to child client coordinates.
+            </summary>
+            <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+            <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+            <returns>Returns true if converted to child client coordinates.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator.SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックスが変わったイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsCheckedListBoxGenerator.ItemCheck(System.Object,System.Windows.Forms.ItemCheckEventArgs)">
+            <summary>
+            チェック状態変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsComboBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator.ComboBoxSelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックス変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator.ComboBoxTextChanged(System.Object,System.EventArgs)">
+            <summary>
+            テキスト変化イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsComboBoxGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator">
+            <summary>
+            This class generates operation codes for FormsDataGridView.
+            </summary>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow">
+            <summary>
+            列行情報
+            </summary>
+        </member>
+        <member name="P:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow.Col">
+            <summary>
+            列
+            </summary>
+        </member>
+        <member name="P:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow.Row">
+            <summary>
+            行
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow.#ctor(System.Int32,System.Int32)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="col">列</param>
+            <param name="row">行</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow.Equals(System.Object)">
+            <summary>
+            等価比較
+            </summary>
+            <param name="obj">オブジェクト</param>
+            <returns>比較結果</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow.GetHashCode">
+            <summary>
+            ハッシュコード取得
+            </summary>
+            <returns>ハッシュコード</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.CellContentClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            セルコンテントのクリック
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.CellEndEdit(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            セル編集イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックスが変化した
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.SelectCells(System.Collections.Generic.List{Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow})">
+            <summary>
+            セル選択
+            </summary>
+            <param name="current">現在状態</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.GetSelectedIndices(System.Collections.Generic.List{Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ColRow})">
+            <summary>
+            選択インデックス
+            </summary>
+            <param name="list">選択インデックス</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.SelectRows(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            行選択
+            </summary>
+            <param name="current">現在状態</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.GetSelectedRows(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            選択行インデックス取得
+            </summary>
+            <param name="selectedRows">選択行インデックス</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDataGridViewGenerator.ConvertChildClientPoint(System.Drawing.Point@,System.String@)">
+            <summary>
+            Convert from parent client coordinates to child client coordinates.
+            </summary>
+            <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+            <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+            <returns>Returns true if converted to child client coordinates.</returns>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsDateTimePickerGenerator">
+            <summary>
+            This class generates operation codes for FormsDateTimePicker.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDateTimePickerGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDateTimePickerGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDateTimePickerGenerator.DateTimeValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            日付変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsDateTimePickerGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsLinkLabelGenerator">
+            <summary>
+            This class generates operation codes for FormsLinkLabel.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsLinkLabelGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsLinkLabelGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsLinkLabelGenerator.LinkLabelClicked(System.Object,System.EventArgs)">
+            <summary>
+            リンククリック
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsListBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.ConvertChildClientPoint(System.Drawing.Point@,System.String@)">
+            <summary>
+            Convert from parent client coordinates to child client coordinates.
+            </summary>
+            <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+            <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+            <returns>Returns true if converted to child client coordinates.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックスが変化した
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.DiffSelect(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            差分チェック
+            </summary>
+            <param name="current">現在状態</param>
+            <param name="old">前の選択状態</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListBoxGenerator.GetSelectedIndices(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            選択インデックス
+            </summary>
+            <param name="selectedIndices">選択インデックス</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator">
+            <summary>
+            This class generates operation codes for FormsListView.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.ConvertChildClientPoint(System.Drawing.Point@,System.String@)">
+            <summary>
+            Convert from parent client coordinates to child client coordinates.
+            </summary>
+            <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+            <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+            <returns>Returns true if converted to child client coordinates.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.AfterLabelEdit(System.Object,System.Windows.Forms.LabelEditEventArgs)">
+            <summary>
+            ラベルが編集された。
+            </summary>
+            <param name="sender">イベント送信元。</param>
+            <param name="e">イベント内容。</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックスが変わったイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.ItemCheck(System.Object,System.Windows.Forms.ItemCheckEventArgs)">
+            <summary>
+            チェック状態変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.DiffSelect(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            差分チェック
+            </summary>
+            <param name="current">現在状態</param>
+            <param name="old">前の選択状態</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsListViewGenerator.GetSelectedIndices(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            選択インデックス
+            </summary>
+            <param name="selectedIndices">選択インデックス</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsMdiClientGenerator">
+            <summary>
+            This class generates operation codes for FormsMdiClient.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMdiClientGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMdiClientGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsMonthCalendarGenerator">
+            <summary>
+            This class generates operation codes for FormsMonthCalendar.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMonthCalendarGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMonthCalendarGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMonthCalendarGenerator.MonthCalendarDateChanged(System.Object,System.EventArgs)">
+            <summary>
+            日付変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMonthCalendarGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsMaskedTextBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsMaskedTextBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMaskedTextBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMaskedTextBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMaskedTextBoxGenerator.TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            テキスト変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsMaskedTextBoxGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripButtonGenerator">
+            <summary>
+            This class generates operation codes for FormsToolStripButton.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripButtonGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripButtonGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripButtonGenerator.ButtonClick(System.Object,System.EventArgs)">
+            <summary>
+            ボタン押下
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripButtonGenerator.CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            チェック変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripItemGenerator">
+            <summary>
+            This class generates operation codes for FormsToolStripItem.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripItemGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripItemGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripItemGenerator.ButtonClick(System.Object,System.EventArgs)">
+            <summary>
+            ボタン押下
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsTrackBarGenerator">
+            <summary>
+            This class generates operation codes for FormsTrackBar.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTrackBarGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTrackBarGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTrackBarGenerator.ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            値変更イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTrackBarGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsNumericUpDownGenerator">
+            <summary>
+            This class generates operation codes for FormsNumericUpDown.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsNumericUpDownGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsNumericUpDownGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsNumericUpDownGenerator.ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            値変更イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsNumericUpDownGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsRadioButtonGenerator">
+            <summary>
+            This class generates operation codes for FormsRadioButton.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRadioButtonGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRadioButtonGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRadioButtonGenerator.CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            チェック状態が変わったときのイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsRichTextBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsRichTextBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRichTextBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRichTextBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRichTextBoxGenerator.TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            テキスト変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsRichTextBoxGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsTabControlGenerator">
+            <summary>
+            This class generates operation codes for FormsTabControl.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTabControlGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTabControlGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTabControlGenerator.SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            選択インデックスが変わったイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsTextBoxGenerator">
+            <summary>
+            This class generates operation codes for FormsTextBox.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTextBoxGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTextBoxGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTextBoxGenerator.TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            テキスト変更
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTextBoxGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator">
+            <summary>
+            This class generates operation codes for FormsToolStrip.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.ConnectEventHandler(System.String[],System.Int32[],System.Windows.Forms.ToolStripItem)">
+            <summary>
+            イベント
+            </summary>
+            <param name="fromText">至るまでの文字列</param>
+            <param name="fromIndex">至るまでのアイテムインデックス</param>
+            <param name="item">アイテム</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.AttachToolStripItem(System.String[],System.Windows.Forms.ToolStripItem)">
+            <summary>
+            ToolStripItemにアッタッチ
+            </summary>
+            <param name="fromText">至るまでのテキスト</param>
+            <param name="item">アタッチ対象アイテム</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.AttachTextBox(System.Int32[],System.Windows.Forms.ToolStripItem)">
+            <summary>
+            テキストボックスにアタッチ
+            </summary>
+            <param name="fromIndex">至るまでのインデックス</param>
+            <param name="item">アタッチ対象アイテム</param>
+            <returns>アタッチしたか</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.AttachCombo(System.Int32[],System.Windows.Forms.ToolStripItem)">
+            <summary>
+            コンボボックスにアタッチ
+            </summary>
+            <param name="fromIndex">至るまでのインデックス</param>
+            <param name="item">アタッチ対象アイテム</param>
+            <returns>アタッチしたか</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.AttachCheckButton(System.Int32[],System.Windows.Forms.ToolStripItem)">
+            <summary>
+            チェックボタンにアタッチ
+            </summary>
+            <param name="fromIndex">至るまでのインデックス</param>
+            <param name="item">アタッチ対象アイテム</param>
+            <returns>アタッチしたか</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.GetItemPath(System.String[])">
+            <summary>
+            アイテムまでのパスを取得
+            </summary>
+            <param name="fromText">至るまでのテキスト</param>
+            <returns>パス</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.GetItemPath(System.Int32[])">
+            <summary>
+            アイテムまでのパスを取得
+            </summary>
+            <param name="fromIndex">至るまでのインデックス</param>
+            <returns>パス</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsToolStripGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            Optimize the code.
+            </summary>
+            <param name="code">code.</param>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator">
+            <summary>
+            This class generates operation codes for FormsTreeView.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.Attach">
+            <summary>
+            Attach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.Detach">
+            <summary>
+            Detach.
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.ConvertChildClientPoint(System.Drawing.Point@,System.String@)">
+            <summary>
+            Convert from parent client coordinates to child client coordinates.
+            </summary>
+            <param name="clientPoint">Client coordinates.Convert to child client coordinates.</param>
+            <param name="childUIObject">A child object that is the origin of client coordinates. If not, set null or empty character.</param>
+            <returns>Returns true if converted to child client coordinates.</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.AfterLabelEdit(System.Object,System.Windows.Forms.NodeLabelEditEventArgs)">
+            <summary>
+            ラベル編集イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.AfterSelect(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            選択変更イベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.AfterExpand(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            開いたイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.AfterCollapse(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            閉じたイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.AfterCheck(System.Object,System.Windows.Forms.TreeViewEventArgs)">
+            <summary>
+            チェックイベント
+            </summary>
+            <param name="sender">イベント送信元</param>
+            <param name="e">イベント内容</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.GetNodePath(System.Windows.Forms.TreeNode)">
+            <summary>
+            ノードへの取得パスを取得
+            </summary>
+            <param name="treeNode">ツリーノード</param>
+            <returns>取得パス</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.FormsTreeViewGenerator.GetNodePathCore(System.Windows.Forms.TreeNode)">
+            <summary>
+            ノードへの取得パスを取得
+            </summary>
+            <param name="treeNode">ツリーノード</param>
+            <returns>取得パス</returns>
+        </member>
+        <member name="T:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility">
+            <summary>
+            自動生成ユーティリティー
+            </summary>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility.RemoveDuplicationSentence(Codeer.TestAssistant.GeneratorToolKit.CaptureCodeGeneratorBase,System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence},System.Object[])">
+            <summary>
+            重複したセンテンスの削除。
+            </summary>
+            <param name="generator">ジェネレータ。</param>
+            <param name="list">リスト。</param>
+            <param name="pattern">パターン。</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility.IsDuplicationSentence(Codeer.TestAssistant.GeneratorToolKit.Sentence,Codeer.TestAssistant.GeneratorToolKit.Sentence,System.Object[])">
+            <summary>
+            重複したセンテンスであるか
+            </summary>
+            <param name="lhs">比較対象1</param>
+            <param name="rhs">比較対象2</param>
+            <param name="pattern">パターン</param>
+            <returns>重複したセンテンスであるか</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility.RemoveDuplicationFunction(Codeer.TestAssistant.GeneratorToolKit.CaptureCodeGeneratorBase,System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence},System.String)">
+            <summary>
+            重複した関数の削除。
+            </summary>
+            <param name="generator">ジェネレータ。</param>
+            <param name="list">リスト。</param>
+            <param name="function">関数。</param>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility.IsDuplicationFunction(Codeer.TestAssistant.GeneratorToolKit.CaptureCodeGeneratorBase,Codeer.TestAssistant.GeneratorToolKit.Sentence,System.String)">
+            <summary>
+            重複した関数であるか。
+            </summary>
+            <param name="generator">ジェネレータ。</param>
+            <param name="sentence">センテンス。</param>
+            <param name="function">関数。</param>
+            <returns>重複した関数であるか。</returns>
+        </member>
+        <member name="M:Ong.Friendly.FormsStandardControls.Generator.GenerateUtility.AdjustText(System.String)">
+            <summary>
+            テキストを調整する
+            </summary>
+            <param name="text">テキスト。</param>
+            <returns>調整済み行。</returns>
+        </member>
+    </members>
+</doc>

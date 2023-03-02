@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codeer.Friendly.Windows.NativeStandardControls.4.0</name>
+    </assembly>
+    <members>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.WindowControlExtensions">
+            <summary>
+            WindowControlの拡張メソッド
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.WindowControlExtensions.Convert(Codeer.Friendly.Windows.Grasp.WindowControl)">
+            <summary>
+            WindowControlを一つだけ引数に取るクラスに変換するオブジェクトを返します。
+            </summary>
+            <param name="window">元となるWindowControl</param>
+            <returns>変換オブジェクト</returns>
+        </member>
+    </members>
+</doc>

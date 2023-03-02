@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codeer.Friendly.Windows.Grasp.3.5</name>
+    </assembly>
+    <members>
+        <member name="T:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore">
+            <summary>
+            WPF解析。
+            .NetCore用
+            </summary>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.RECT">
+            <summary>
+            矩形。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWindowRect(System.IntPtr,Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.RECT@)">
+            <summary>
+            ウィンドウ矩形の取得。
+            </summary>
+            <param name="hwnd">ウィンドウハンドル。</param>
+            <param name="lpRect">矩形。</param>
+            <returns>成否。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.#ctor(System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="isKeepVisualTree">visualTreeをキープするか</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.FromHandle(System.IntPtr)">
+            <summary>
+            ウィンドウハンドルからオブジェクトへ変換。
+            </summary>
+            <param name="windowHandle">ウィンドウハンドル。</param>
+            <returns>オブジェクト</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetHandle(System.Object)">
+            <summary>
+            オブジェクトの持つウィンドウハンドルを取得
+            </summary>
+            <param name="obj">オブジェクト</param>
+            <returns>ウィンドウハンドル</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.Analyze(System.IntPtr)">
+            <summary>
+            解析
+            </summary>
+            <param name="windowHandle">ハンドル</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.MergeDuplication(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[])">
+            <summary>
+            重複をマージする
+            </summary>
+            <param name="visualInfo">ビジュアル情報</param>
+            <param name="info">ロジカルツリー情報</param>
+            <returns>重複を取り除いたビジュアル要素</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.MutualIndex(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[])">
+            <summary>
+            インデックスをお互い持ち合う
+            </summary>
+            <param name="visualInfo">ビジュアル情報</param>
+            <param name="info">ロジカルツリー情報</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.ToFlat(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],System.Collections.Generic.List{Codeer.Friendly.Windows.Grasp.Inside.WindowInfo},System.Boolean)">
+            <summary>
+            ツリー構造からフラットなリストに変更
+            </summary>
+            <param name="infos">情報</param>
+            <param name="list">リスト</param>
+            <param name="clearChildren">子をクリアするか</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.IndexOf(System.Collections.Generic.List{Codeer.Friendly.Windows.Grasp.Inside.WindowInfo},Codeer.Friendly.Windows.Grasp.Inside.WindowInfo)">
+            <summary>
+            リストの中から参照が一致するインデックスを見つける。
+            </summary>
+            <param name="list">リスト。</param>
+            <param name="obj">オブジェクト。</param>
+            <returns>インデックス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWIndowInfoLogicalIndex(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ロジカルツリーからウィンドウ情報取得
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="logicalIndex">ロジカルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWIndowInfoVisualIndex(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ビジュアルツリーからウィンドウ情報取得
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="visualIndex">ビジュアルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.CreateWindowInfo(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ウィンドウ情報作成
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="logicalIndex">ロジカルインデックス</param>
+            <param name="visualIndex">ビジュアルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.WindowControlExtensions">
+            <summary>
+            Extended method of WindowControl.
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowControlExtensions.Convert``1(Codeer.Friendly.Windows.Grasp.WindowControl)">
+            <summary>
+            Convert WindowControl to T.
+            T must have a constructor that takes WindowsControl as an argument.
+            </summary>
+            <typeparam name="T">Type of destination.</typeparam>
+            <param name="src">WindowControl.</param>
+            <returns>T.</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions">
+            <summary>
+            Extended method of WindowsAppFriend.
+            The first argument defined in WindowControl makes it possible to call the static method of WindowAppFriend with extension method.
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.FromZTop(Codeer.Friendly.Windows.WindowsAppFriend)">
+            <summary>
+            Creates a WindowControl for the window closest to the foreground.
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <returns>WindowControl to manipulate the accessed window.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetTopLevelWindows(Codeer.Friendly.Windows.WindowsAppFriend)">
+            <summary>
+            Acquires all of the active top-level windows in the target process. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <returns>Window manipulation objects for all of the active top-level windows of the target process. </returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Identifies a top-level window based on the string value returned from the Windows Api's GetWindowText. 
+            Fails when two or more windows match the same condition. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="text">Window text.</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Identifies a top-level window based on its full .Net type name. 
+            Fails when two or more windows match the same condition. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="typeFullName">Full .Net type name.</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Identifies a window based its window class name. 
+            Fails when two or more windows match the same criteria. 
+            Window class name can be easily investigated with TestAssistant.
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="className">Window class name.</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Waits until a top-level window returning the specified string via the GetWindowText Windows API is found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="text">Window text.</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            Waits until a top-level window returning the specified string via the GetWindowText Windows API is found. 
+            Also returns if the indicated asynchronous operation completes before a window can be found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="text">Window text.</param>
+            <param name="async">Asynchronous object.</param>
+            <returns>
+            Window manipulation object.
+            Returns null if the Async operation completes before Identify window.
+            </returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Waits until a top-level window with the indicated full .Net name is found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="typeFullName">Full .Net type name</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            Waits until a top-level window with the indicated full .Net name is found. 
+            Also returns if the indicated asynchronous operation completes before a window can be found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="typeFullName">Full .Net type name</param>
+            <param name="async">Asynchronous object.</param>
+            <returns>
+            Window manipulation object.
+            Returns null if the Async operation completes before Identify window.
+            </returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Waits until a top-level window with the indicated window class is found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="className">Window class name.</param>
+            <returns>Window manipulation object.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            Waits until a top-level window with the indicated window class is found. 
+            Also returns if the indicated asynchronous operation completes before a window can be found. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="className">Window class name.</param>
+            <param name="async">Asynchronous object.</param>
+            <returns>
+            Window manipulation object.
+            Returns null if the Async operation completes before Identify window.
+            </returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Retrieves all top-level windows matching the indicated window text. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="text">Window text.</param>
+            <returns>Window manipulation objects.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Retrieves all top-level windows matching the indicated full .Net type name. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="typeFullName">Full .NET type name.</param>
+            <returns>Window manipulation objects.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            Retrieves all top-level windows matching the indicated window class type name. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="className">Window class name.</param>
+            <returns>Window manipulation objects.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForNextWindow(Codeer.Friendly.Windows.WindowsAppFriend,System.Action)">
+            <summary>
+            Wait for the next window to appear. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="action">Wait for the next window to appear. </param>
+            <returns>Next window.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForNextWindow(Codeer.Friendly.Windows.WindowsAppFriend,System.Action,Codeer.Friendly.Async)">
+            <summary>
+            Wait for the next window to appear. 
+            </summary>
+            <param name="app">Application manipulation object. </param>
+            <param name="action">Wait for the next window to appear. </param>
+            <param name="async">Asynchronous object.</param>
+            <returns>Next window.</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetNextWindows(Codeer.Friendly.Windows.WindowsAppFriend,System.Action)">
+            <summary>
+            Retrieve the next window displayed after the specified processing. 
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="action">Wait for the next window to appear. </param>
+            <returns>Next windows.</returns>
+        </member>
+    </members>
+</doc>

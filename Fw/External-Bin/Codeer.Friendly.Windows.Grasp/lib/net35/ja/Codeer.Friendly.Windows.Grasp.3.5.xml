@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codeer.Friendly.Windows.Grasp.3.5</name>
+    </assembly>
+    <members>
+        <member name="T:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore">
+            <summary>
+            WPF解析。
+            .NetCore用
+            </summary>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.RECT">
+            <summary>
+            矩形。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWindowRect(System.IntPtr,Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.RECT@)">
+            <summary>
+            ウィンドウ矩形の取得。
+            </summary>
+            <param name="hwnd">ウィンドウハンドル。</param>
+            <param name="lpRect">矩形。</param>
+            <returns>成否。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.#ctor(System.Boolean)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="isKeepVisualTree">visualTreeをキープするか</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.FromHandle(System.IntPtr)">
+            <summary>
+            ウィンドウハンドルからオブジェクトへ変換。
+            </summary>
+            <param name="windowHandle">ウィンドウハンドル。</param>
+            <returns>オブジェクト</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetHandle(System.Object)">
+            <summary>
+            オブジェクトの持つウィンドウハンドルを取得
+            </summary>
+            <param name="obj">オブジェクト</param>
+            <returns>ウィンドウハンドル</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.Analyze(System.IntPtr)">
+            <summary>
+            解析
+            </summary>
+            <param name="windowHandle">ハンドル</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.MergeDuplication(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[])">
+            <summary>
+            重複をマージする
+            </summary>
+            <param name="visualInfo">ビジュアル情報</param>
+            <param name="info">ロジカルツリー情報</param>
+            <returns>重複を取り除いたビジュアル要素</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.MutualIndex(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[])">
+            <summary>
+            インデックスをお互い持ち合う
+            </summary>
+            <param name="visualInfo">ビジュアル情報</param>
+            <param name="info">ロジカルツリー情報</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.ToFlat(Codeer.Friendly.Windows.Grasp.Inside.WindowInfo[],System.Collections.Generic.List{Codeer.Friendly.Windows.Grasp.Inside.WindowInfo},System.Boolean)">
+            <summary>
+            ツリー構造からフラットなリストに変更
+            </summary>
+            <param name="infos">情報</param>
+            <param name="list">リスト</param>
+            <param name="clearChildren">子をクリアするか</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.IndexOf(System.Collections.Generic.List{Codeer.Friendly.Windows.Grasp.Inside.WindowInfo},Codeer.Friendly.Windows.Grasp.Inside.WindowInfo)">
+            <summary>
+            リストの中から参照が一致するインデックスを見つける。
+            </summary>
+            <param name="list">リスト。</param>
+            <param name="obj">オブジェクト。</param>
+            <returns>インデックス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWIndowInfoLogicalIndex(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ロジカルツリーからウィンドウ情報取得
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="logicalIndex">ロジカルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.GetWIndowInfoVisualIndex(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ビジュアルツリーからウィンドウ情報取得
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="visualIndex">ビジュアルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.Inside.WpfAnalyzerForCore.CreateWindowInfo(System.Object,System.Windows.Point,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32})">
+            <summary>
+            ウィンドウ情報作成
+            </summary>
+            <param name="target">対象</param>
+            <param name="rootPos">ルート位置</param>
+            <param name="logicalIndex">ロジカルインデックス</param>
+            <param name="visualIndex">ビジュアルインデックス</param>
+            <returns>ウィンドウ情報</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.WindowControlExtensions">
+            <summary>
+            WindowControlの拡張メソッドです。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowControlExtensions.Convert``1(Codeer.Friendly.Windows.Grasp.WindowControl)">
+            <summary>
+            WindowControlからT型に変換します。
+            T型はWindowControlを引数に取るコンストラクタを持つ必要があります。
+            </summary>
+            <typeparam name="T">T変換先の型。</typeparam>
+            <param name="src">WindowControl.</param>
+            <returns>T。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions">
+            <summary>
+            WindowsAppFriendの拡張メソッドです。
+            WindowControlに定義されている第一引数がWindowAppFriendのstaticメソッドを拡張メソッドで呼び出せるようにしています。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.FromZTop(Codeer.Friendly.Windows.WindowsAppFriend)">
+            <summary>
+            最前面ウィンドウを取得します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <returns>最前面ウィンドウ。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetTopLevelWindows(Codeer.Friendly.Windows.WindowsAppFriend)">
+            <summary>
+            対象プロセスの有効な全てのトップレベルウィンドウを取得。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <returns>対象プロセスの有効な全てのトップレベルウィンドウ。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            WindowsApiのGetWindowTextで取得した文字列が、指定の文字列になる有効なトップレベルウィンドウを特定します。
+            条件に一致するウィンドウが複数存在する場合は特定に失敗します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="text">ウィンドウテキスト。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            指定の.netタイプフルネームに一致する有効なトップレベルウィンドウを特定します。
+            条件に一致するウィンドウが複数存在する場合は特定に失敗します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="typeFullName">タイプフルネーム。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.IdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            ウィンドウクラス名称に一致する有効なトップレベルウィンドウを特定します。
+            条件に一致するウィンドウが複数存在する場合は特定に失敗します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="className">ウィンドウクラス名称。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            WindowsApiのGetWindowTextで取得した文字列が、指定の文字列になる有効なトップレベルウィンドウを特定するまで待ちます。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="text">ウィンドウテキスト。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            WindowsApiのGetWindowTextで取得した文字列が、指定の文字列になる有効なトップレベルウィンドウを特定するまで待ちます。
+            ウィンドウを特定前に渡された非同期オブジェクト(async)が操作完了した場合にも終了します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="text">ウィンドウテキスト。</param>
+            <param name="async">非同期処理オブジェクト。</param>
+            <returns>ウィンドウ操作クラス。(特定前に、非同期処理が終了した場合はnull)</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            指定の.netタイプフルネームに一致する有効なトップレベルウィンドウを特定するまで待ちます。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="typeFullName">タイプフルネーム。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            指定の.netタイプフルネームに一致する有効なトップレベルウィンドウを特定するまで待ちます。
+            ウィンドウを特定前に渡された非同期オブジェクト(async)が操作完了した場合にも終了します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="typeFullName">タイプフルネーム。</param>
+            <param name="async">非同期処理オブジェクト。</param>
+            <returns>ウィンドウ操作クラス。(特定前に、非同期処理が終了した場合はnull)</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            ウィンドウクラス名称に一致する有効なトップレベルウィンドウを特定するまで待ちます。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="className">ウィンドウクラス名称。</param>
+            <returns>ウィンドウ操作クラス。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForIdentifyFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String,Codeer.Friendly.Async)">
+            <summary>
+            ウィンドウクラス名称に一致する有効なトップレベルウィンドウを特定するまで待ちます。
+            ウィンドウを特定前に渡された非同期オブジェクト(async)が操作完了した場合にも終了します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="className">ウィンドウクラス名称。</param>
+            <param name="async">非同期処理オブジェクト。</param>
+            <returns>ウィンドウ操作クラス。(特定前に、非同期処理が終了した場合はnull)</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromWindowText(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            指定のウィンドウテキストに一致する有効なトップレベルウィンドウをすべて取得します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="text">ウィンドウテキスト。</param>
+            <returns>ウィンドウ操作クラス配列。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromTypeFullName(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            指定の.netタイプフルネームに一致する有効なトップレベルウィンドウをすべて取得します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="typeFullName">タイプフルネーム。</param>
+            <returns>ウィンドウ操作クラス配列。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetFromWindowClass(Codeer.Friendly.Windows.WindowsAppFriend,System.String)">
+            <summary>
+            指定のウィンドウクラス名称に一致する有効なトップレベルウィンドウをすべて取得します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="className">ウィンドウクラス名称。</param>
+            <returns>ウィンドウ操作クラス配列。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForNextWindow(Codeer.Friendly.Windows.WindowsAppFriend,System.Action)">
+            <summary>
+            次のウィンドウが表示されるのを待ちます。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="action">ウィンドウが表示される動作。</param>
+            <returns>次のウィンドウ。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.WaitForNextWindow(Codeer.Friendly.Windows.WindowsAppFriend,System.Action,Codeer.Friendly.Async)">
+            <summary>
+            ウィンドウが表示される動作
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="action">ウィンドウが表示される動作。</param>
+            <param name="async">非同期処理オブジェクト。</param>
+            <returns>次のウィンドウ。(表示前に非同期処理が終了した場合はnull)。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.Grasp.WindowsAppFriendExtensions.GetNextWindows(Codeer.Friendly.Windows.WindowsAppFriend,System.Action)">
+            <summary>
+            指定の処理の次に表示されたウィンドウを取得します。
+            </summary>
+            <param name="app">アプリケーション操作クラス。</param>
+            <param name="action">ウィンドウが表示される動作。</param>
+            <returns>次のウィンドウ。</returns>
+        </member>
+    </members>
+</doc>

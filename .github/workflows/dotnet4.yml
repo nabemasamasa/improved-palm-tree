@@ -1,0 +1,21 @@
+﻿name: .NET Framework 4.7.2
+
+on: pull_request
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Build
+      run: msbuild $GITHUB_WORKSPACE
+
+    - name: Run NUnit
+      shell: cmd
+      run: Fw\External-Bin\Net\2.0\nunit-console.exe HitAndBlowTest\bin\Debug\HitAndBlowTest.dll

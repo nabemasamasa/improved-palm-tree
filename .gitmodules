@@ -1,0 +1,3 @@
+[submodule "Fw"]
+	path = Fw
+	url = git@auto3tsv132:subaru/Fhi.Fw.git

@@ -1,0 +1,520 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codeer.Friendly.Windows.NativeStandardControls.Generator</name>
+    </assembly>
+    <members>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.AnalyzeMessage">
+            <summary>
+            メッセージ解析。
+            </summary>
+            <param name="handle">ハンドル。</param>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase">
+            <summary>
+            フックオブジェクト。
+            一つのスレッドにあまりに多くのフックを実行すると失敗することがあるのでフック自体は一回にまとめる。
+            </summary>
+        </member>
+        <member name="P:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.Empty">
+            <summary>
+            空であるか。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.Init(System.Int32)">
+            <summary>
+            コンストラクタ。
+            </summary>
+            <param name="threadId">スレッドID。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.Entry(Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.AnalyzeMessage)">
+            <summary>
+            登録。
+            </summary>
+            <param name="proc">メッセージ解析メソッド。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.Remove(Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.AnalyzeMessage)">
+            <summary>
+            削除。
+            </summary>
+            <param name="proc">メッセージ解析メソッド。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.AnalyzeMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            メッセージ解析。
+            </summary>
+            <param name="handle">ハンドル。</param>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.CallNextHookEx(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            次のフック呼び出し
+            </summary>
+            <param name="nCode">コード</param>
+            <param name="wParam">wParam</param>
+            <param name="lParam">lParam</param>
+            <returns>結果</returns>
+        </member>
+        <member name="P:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.HookType">
+            <summary>
+            フックタイプ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.HookBase.WindowProcHook(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            ウィンドウプロックフック。
+            </summary>
+            <param name="hookCode">フックコード。</param>
+            <param name="wParam">WPARAM。</param>
+            <param name="lParam">LPARAM。</param>
+            <returns>戻り値。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookCallWndProc">
+            <summary>
+            ウィンドウプロックフックオブジェクト。
+            </summary>
+        </member>
+        <member name="P:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookCallWndProc.HookType">
+            <summary>
+            フックタイプ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookCallWndProc.WindowProcHook(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            ウィンドウプロックフック。
+            </summary>
+            <param name="hookCode">フックコード。</param>
+            <param name="wParam">WPARAM。</param>
+            <param name="lParam">LPARAM。</param>
+            <returns>戻り値。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookGetMessage">
+            <summary>
+            メッセージフックオブジェクト。
+            </summary>
+        </member>
+        <member name="P:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookGetMessage.HookType">
+            <summary>
+            フックタイプ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.MessageHookGetMessage.WindowProcHook(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            ウィンドウプロックフック。
+            </summary>
+            <param name="hookCode">フックコード。</param>
+            <param name="wParam">WPARAM。</param>
+            <param name="lParam">LPARAM。</param>
+            <returns>戻り値。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.ThreadMessageHookManager`1">
+            <summary>
+            フック管理。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.ThreadMessageHookManager`1.Entry(System.Int32,Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.AnalyzeMessage)">
+            <summary>
+            登録。
+            </summary>
+            <param name="threadId">スレッドID。</param>
+            <param name="proc">メッセージ解析メソッド。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.ThreadMessageHookManager`1.Remove(System.Int32,Codeer.Friendly.Windows.NativeStandardControls.Generator.Hook.AnalyzeMessage)">
+            <summary>
+            削除。
+            </summary>
+            <param name="threadId">スレッドID。</param>
+            <param name="proc">メッセージ解析メソッド。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.Inside.TimerInvoker">
+            <summary>
+            タイマーメッセージは優先順位が低い(PostMessageより低い)。
+            ので通常のコントロールの処理がすべて終了したのちに呼び出される。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.Inside.TimerInvoker.BeginInvoke(System.Windows.Forms.MethodInvoker)">
+            <summary>
+            遅延実行。
+            </summary>
+            <param name="invoke">実行オブジェクト。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeButtonGenerator">
+            <summary>
+            WindowClassがButtonの操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeButtonGenerator.Attach">
+            <summary>
+            アタッチ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeButtonGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeComboBoxGenerator">
+            <summary>
+            WindowClassがComboBox、ComboBoxEx32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeComboBoxGenerator.Attach">
+            <summary>
+            アタッチ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeComboBoxGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeComboBoxGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeCommandTargetGenerator">
+            <summary>
+            ネイティブのWM_COMMANDに対応する処理を生成するクラス。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeCommandTargetGenerator.Attach">
+            <summary>
+            アタッチ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeCommandTargetGenerator.Detach">
+            <summary>
+            ディタッチ。
+            </summary>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeDateTimePickerGenerator">
+            <summary>
+            WindowClassがSysDateTimePick32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeDateTimePickerGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeEditGenerator">
+            <summary>
+            WindowClassがEdit、RichEdit20A、RichEdit20Wの操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeEditGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeEditGenerator.AdjustText(System.String)">
+            <summary>
+            テキストを調整する
+            </summary>
+            <param name="text">テキスト。</param>
+            <returns>調整済み行。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeEditGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase">
+            <summary>
+            Nativeコントロールのコード生成基本クラス。
+            </summary>
+        </member>
+        <member name="P:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.ControlId">
+            <summary>
+            コントロールID。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.Attach">
+            <summary>
+            アタッチ。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.Detach">
+            <summary>
+            ディタッチ。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.MyAnalyzeMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            メッセージ解析。
+            </summary>
+            <param name="handle">ハンドル。</param>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.HasFocus">
+            <summary>
+            フォーカスを持っているか。
+            </summary>
+            <returns>フォーカスを持っているか。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.RemoveDuplicationFunction(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence},System.String)">
+            <summary>
+            重複した関数の削除。
+            </summary>
+            <param name="list">リスト。</param>
+            <param name="function">関数。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.IsDuplicationFunction(Codeer.TestAssistant.GeneratorToolKit.Sentence,System.String)">
+            <summary>
+            重複した関数であるか。
+            </summary>
+            <param name="sentence">センテンス。</param>
+            <param name="function">関数。</param>
+            <returns>重複した関数であるか。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.RemoveLastLineDuplicationFunction(System.String)">
+            <summary>
+            最終行が重複していたら削除。
+            </summary>
+            <param name="function">関数名称。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.LastLineIsSame(Codeer.TestAssistant.GeneratorToolKit.Sentence)">
+            <summary>
+            最終行が指定の行と一致するか。
+            </summary>
+            <param name="line">行情報。</param>
+            <returns>最終行が指定の行と一致するか。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.BeginInvoke(System.Windows.Forms.MethodInvoker)">
+            <summary>
+            遅延実行。
+            </summary>
+            <param name="invoke">実行オブジェクト。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeGeneratorBase.GetWindowText">
+            <summary>
+            ウィンドウテキストの取得。
+            </summary>
+            <returns>ウィンドウテキスト。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeIPAddressGenerator">
+            <summary>
+            WindowClassがSysIPAddress32のウィンドウに対応した操作を提供します。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeIPAddressGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeIPAddressGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListBoxGenerator">
+            <summary>
+            WindowClassがListBoxの操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListBoxGenerator.Attach">
+            <summary>
+            アタッチ
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListBoxGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListBoxGenerator.OnSelected">
+            <summary>
+            選択変更時にコードを生成する。
+            </summary>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListControlGenerator">
+            <summary>
+            WindowClassがSysListView32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeListControlGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeMonthCalendarGenerator">
+            <summary>
+            WindowClassがSysMonthCal32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeMonthCalendarGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeScrollBarGenerator">
+            <summary>
+            WindowClassがScrollBarの操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeScrollBarGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeScrollBarGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSliderGenerator">
+            <summary>
+            WindowClassがmsctls_trackbar32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSliderGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSliderGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSpinButtonGenerator">
+            <summary>
+            WindowClassがmsctls_updown32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSpinButtonGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="wparam">wparam</param>
+            <param name="lparam">lparam</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeSpinButtonGenerator.Optimize(System.Collections.Generic.List{Codeer.TestAssistant.GeneratorToolKit.Sentence})">
+            <summary>
+            最適化。
+            </summary>
+            <param name="code">コード。</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTabGenerator">
+            <summary>
+            WindowClassがSysTabControl32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTabGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析
+            </summary>
+            <param name="message">メッセージ</param>
+            <param name="wparam">wparam</param>
+            <param name="lparam">lparam</param>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator">
+            <summary>
+            WindowClassがSysTreeView32の操作をトレースしてコード生成。
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator.AnalyzeMessage(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            解析。
+            </summary>
+            <param name="message">メッセージ。</param>
+            <param name="wparam">wparam。</param>
+            <param name="lparam">lparam。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator.GenerateEmulateCheck(System.IntPtr,System.String)">
+            <summary>
+            EmulateCheckのコード生成
+            </summary>
+            <param name="hItem">アイテムハンドル。</param>
+            <param name="path">アイテムまでのパス。</param>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator.GetCurrentMousePosItem">
+            <summary>
+            現在のマウス選択位置のアイテムを取得。
+            </summary>
+            <returns>現在のマウス選択位置のアイテム。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator.GetCurrentItemAndPath(System.IntPtr@,System.String@)">
+            <summary>
+            現在の選択アイテムとそこまでパスを取得。
+            </summary>
+            <param name="hItem">アイテム。</param>
+            <param name="path">パス。</param>
+            <returns>成否。</returns>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.NativeTreeGenerator.GetNodePathCode(System.IntPtr)">
+            <summary>
+            指定のノードまでのパスコードを取得。
+            </summary>
+            <param name="hItem">アイテムハンドル。</param>
+            <returns>指定のパスコード。</returns>
+        </member>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.Generator.WindowControlGenerator">
+            <summary>
+            For key mouse capture.
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.WindowControlGenerator.Attach">
+            <summary>
+            nothing.
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.Generator.WindowControlGenerator.Detach">
+            <summary>
+            nothing.
+            </summary>
+        </member>
+    </members>
+</doc>

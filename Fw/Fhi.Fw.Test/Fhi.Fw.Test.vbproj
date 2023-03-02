@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Fhi.Fw</RootNamespace>
+    <AssemblyName>Fhi.Fw.Test</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Fhi.Fw.Test.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Fhi.Fw.Test.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Fhi.Fw.Test.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Fhi.Fw.Test.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\External-Bin\Net\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\External-Bin\Net\2.0\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\External-Bin\Net\2.0\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External-Bin\Net\2.0\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\External-Bin\Net\3.5\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\InternetExplorerManipulatorTest.vb" />
+    <Compile Include="App\Xls\ExcelExTest.vb" />
+    <Compile Include="AssemblyUtilTest.vb" />
+    <Compile Include="CollectionUtilTest.vb" />
+    <Compile Include="CompareUtilTest.vb" />
+    <Compile Include="DateUtilTest.vb" />
+    <Compile Include="Db\CriteriaTest.vb" />
+    <Compile Include="Db\FakeTableDao.vb" />
+    <Compile Include="Db\DbAccessHelperTest.vb" />
+    <Compile Include="Db\DbTestInitializer.vb" />
+    <Compile Include="Db\FakeTableDaoTest.vb" />
+    <Compile Include="Db\Impl\DaoEachFeatureImplJoinTest.vb" />
+    <Compile Include="Db\Impl\DaoEachTableImplTest.vb" />
+    <Compile Include="Db\Impl\LinkServer\Testpf01DaoImplTest.vb" />
+    <Compile Include="Db\Impl\LinkServer\TestLinkServerDbClient.vb" />
+    <Compile Include="Db\Impl\LinkServer\Testpf01DaoImpl.vb" />
+    <Compile Include="Db\Impl\LinkServer\Testpf01Vo.vb" />
+    <Compile Include="Db\Impl\TFunyaDao.vb" />
+    <Compile Include="Db\Impl\TFunyaVo.vb" />
+    <Compile Include="Db\Impl\THogeFugaDao.vb" />
+    <Compile Include="Db\Impl\THogeFugaVo.vb" />
+    <Compile Include="Db\FakeAbstractDaoEachTable.vb" />
+    <Compile Include="Db\FakeAbstractDaoEachTableTest.vb" />
+    <Compile Include="Db\LinkServerSqlTest.vb" />
+    <Compile Include="Db\SampleVo.vb" />
+    <Compile Include="Db\DbClientTest.vb" />
+    <Compile Include="Db\SqlAccessTest.vb" />
+    <Compile Include="Db\SqlUtilTest.vb" />
+    <Compile Include="Db\Sql\ExpressionOldTest.vb" />
+    <Compile Include="Db\Sql\ExpressionTest.vb" />
+    <Compile Include="Db\Sql\FugaVo.vb" />
+    <Compile Include="Db\Sql\HogeVo.vb" />
+    <Compile Include="Db\Sql\PostfixNotationTest.vb" />
+    <Compile Include="Db\Sql\SqlAnalyzerTest.vb" />
+    <Compile Include="Db\Sql\SqlBindAnalyzerTest.vb" />
+    <Compile Include="Db\Sql\SqlBindUtilTest.vb" />
+    <Compile Include="Db\Sql\SqlParameterTest.vb" />
+    <Compile Include="Db\Sql\SqlWhitespaceCleanerTest.vb" />
+    <Compile Include="Db\Sql\XmlCDataEncloserTest.vb" />
+    <Compile Include="Db\Sql\SqlExpressionEvaluatorTest.vb" />
+    <Compile Include="Db\Sql\SqlXmlAnalyzerTest.vb" />
+    <Compile Include="Db\Sql\XmlInequalityTest.vb" />
+    <Compile Include="Db\TableExclusionTest.vb" />
+    <Compile Include="Db\TestSqlCeDbClient.vb" />
+    <Compile Include="Db\TestSqlDbClient.vb" />
+    <Compile Include="Db\TestSQLiteDbClient.vb" />
+    <Compile Include="Db\TShisakuEventDao.vb" />
+    <Compile Include="Db\TShisakuEventVo.vb" />
+    <Compile Include="Domain\CollectionJudgeerObjectTest.vb" />
+    <Compile Include="Domain\CollectionObjectTest.vb" />
+    <Compile Include="Domain\CollectionValueObjectTest.vb" />
+    <Compile Include="Domain\EntityTest.vb" />
+    <Compile Include="Domain\PrimitiveValueObjectTest.vb" />
+    <Compile Include="Domain\ValueObjectTest.vb" />
+    <Compile Include="DotNetUtilTest.vb" />
+    <Compile Include="EnumUtilTest.vb" />
+    <Compile Include="EzUtilTest.vb" />
+    <Compile Include="FakeLogger.vb" />
+    <Compile Include="FakeLoggerTest.vb" />
+    <Compile Include="FakeSystemDate.vb" />
+    <Compile Include="FileUtilTest.vb" />
+    <Compile Include="LearningFloatTest.vb" />
+    <Compile Include="LearningInheritTestClassTest.vb" />
+    <Compile Include="NetworkUtilTest.vb" />
+    <Compile Include="PathUtilTest.vb" />
+    <Compile Include="Sys\PrivateProfileHelperTest.vb" />
+    <Compile Include="Lang\Threading\AThreadTest.vb" />
+    <Compile Include="LearningDbTest.vb" />
+    <Compile Include="LearningDictionarySyncLockTest.vb" />
+    <Compile Include="LearningTest.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SystemDateTest.vb" />
+    <Compile Include="StringUtilTest.vb" />
+    <Compile Include="Sys\PrivateProfileTest.vb" />
+    <Compile Include="TestUtil\DebugString\DebugStringMakerWildcard.vb" />
+    <Compile Include="TestUtil\DebugString\DebugStringRuleBuilder.vb" />
+    <Compile Include="TestUtil\DebugString\DebugStringRuleProperty.vb" />
+    <Compile Include="TestUtil\DebugString\DebugStringMaker.vb" />
+    <Compile Include="TestUtil\DebugString\IDebugStringRuleBinder.vb" />
+    <Compile Include="TestUtil\DebugString\Test\DebugStringMakerTest.vb" />
+    <Compile Include="TestUtil\NonPublicUtil.vb" />
+    <Compile Include="TestUtil\TestDir\A.vb" />
+    <Compile Include="TestUtil\TestDir\B.vb" />
+    <Compile Include="TestUtil\SpecFlowUtil.vb" />
+    <Compile Include="TestUtil\Test\NonPublicUtilTest.vb" />
+    <Compile Include="TestUtil\Test\SpecFlowUtilTest.vb" />
+    <Compile Include="TypeUtilTest.vb" />
+    <Compile Include="Util\AbstractImmutablePairTest.vb" />
+    <Compile Include="Util\ChangeJudgeerTest.vb" />
+    <Compile Include="Util\Concurrent\ArrayBlockingQueueTest.vb" />
+    <Compile Include="Util\Concurrent\FutureTaskTest.vb" />
+    <Compile Include="Lang\Threading\ThreadLocalTest.vb" />
+    <Compile Include="Util\Concurrent\TimeUnitTest.vb" />
+    <Compile Include="Util\Concurrent\PromiseTest.vb" />
+    <Compile Include="Util\LruCacheTest.vb" />
+    <Compile Include="Util\RandomStringBuilderTest.vb" />
+    <Compile Include="Util\SequencedDictionaryTest.vb" />
+    <Compile Include="Util\VoCopy\VoCopyPropertyTest.vb" />
+    <Compile Include="Util\Csv\CsvReaderTest.vb" />
+    <Compile Include="Util\Csv\CsvVoBrokerTest.vb" />
+    <Compile Include="Util\Csv\CsvWriterTest.vb" />
+    <Compile Include="Util\DecamelizedPropertyAccessorTest.vb" />
+    <Compile Include="Util\Fixed\AbstractFixedDefineTest.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedVoBrokerTest.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedRuleBuilderTest.vb" />
+    <Compile Include="Util\Fixed\FixedFieldTest.vb" />
+    <Compile Include="Util\Fixed\FixedGroupHelperTest.vb" />
+    <Compile Include="Util\Fixed\FixedGroupTest.vb" />
+    <Compile Include="Util\Grouping\FakeEventVo.vb" />
+    <Compile Include="Util\Grouping\VoGroupingTest.vb" />
+    <Compile Include="Util\IndexedListTest.vb" />
+    <Compile Include="Util\LabelValue\LabelValueComparerTest.vb" />
+    <Compile Include="Util\LabelValue\LabelValueExtracterTest.vb" />
+    <Compile Include="Util\LabelValue\FakeSampleVo.vb" />
+    <Compile Include="Util\NameGetterTest.vb" />
+    <Compile Include="Util\OperationParserTest.vb" />
+    <Compile Include="Util\Search\BMSearchTest.vb" />
+    <Compile Include="Util\ShortcutFileTest.vb" />
+    <Compile Include="Util\SimpleTimeoutCacheTest.vb" />
+    <Compile Include="Util\SynchronizedIndexedListTest.vb" />
+    <Compile Include="Util\TimeoutDictionaryTest.vb" />
+    <Compile Include="Util\ToStringBuilderTest.vb" />
+    <Compile Include="Util\VoPropertyMarkerTest.vb" />
+    <Compile Include="Util\WorkerThread\ChannelTest.vb" />
+    <Compile Include="VoUtilTest.vb" />
+    <Compile Include="App\Web\RequestUtilTest.vb" />
+    <Compile Include="XmlUtilTest.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fhi.Fw\Fhi.Fw.vbproj">
+      <Project>{8D9EF493-1DB9-4B5D-A205-22513969D5B2}</Project>
+      <Name>Fhi.Fw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

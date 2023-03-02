@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Codeer.Friendly.Windows.NativeStandardControls.4.0</name>
+    </assembly>
+    <members>
+        <member name="T:Codeer.Friendly.Windows.NativeStandardControls.WindowControlExtensions">
+            <summary>
+            WindowControl extension methods.
+            </summary>
+        </member>
+        <member name="M:Codeer.Friendly.Windows.NativeStandardControls.WindowControlExtensions.Convert(Codeer.Friendly.Windows.Grasp.WindowControl)">
+            <summary>
+            Can be converted to a class that has a constructor that takes only WindowControl as an argument.
+            </summary>
+            <param name="window">The underlying WindowControl.</param>
+            <returns>Converted result.</returns>
+        </member>
+    </members>
+</doc>

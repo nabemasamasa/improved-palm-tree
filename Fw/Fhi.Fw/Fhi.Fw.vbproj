@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D9EF493-1DB9-4B5D-A205-22513969D5B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Fhi.Fw</RootNamespace>
+    <AssemblyName>Fhi.Fw</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Fhi.Fw.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Fhi.Fw.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Fhi.Fw.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Fhi.Fw.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\External-Bin\Net\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App\InternetExplorerManipulator.vb" />
+    <Compile Include="App\Web\WebAuthorityUtil.vb" />
+    <Compile Include="App\Xls\XlVoRuleBuilder.vb" />
+    <Compile Include="App\Xls\CellRangeDefinition.vb" />
+    <Compile Include="App\Xls\ExcelEx.vb" />
+    <Compile Include="App\Xls\XlAxis.vb" />
+    <Compile Include="App\Xls\XlBorders.vb" />
+    <Compile Include="App\Xls\XlVoBroker.vb" />
+    <Compile Include="App\Xls\XlVoPropertyRule.vb" />
+    <Compile Include="App\Xls\XlVoSelector.vb" />
+    <Compile Include="CollectionUtil.vb" />
+    <Compile Include="CompareUtil.vb" />
+    <Compile Include="DateUtil.vb" />
+    <Compile Include="Db\Criteria.vb" />
+    <Compile Include="Db\CriteriaBinder.vb" />
+    <Compile Include="Db\CriteriaParameter.vb" />
+    <Compile Include="Db\DbAccess.vb" />
+    <Compile Include="Db\ConnectionUtil.vb" />
+    <Compile Include="Db\DaoEachFeature.vb" />
+    <Compile Include="Db\DaoEachTable.vb" />
+    <Compile Include="Db\DbProvider.vb" />
+    <Compile Include="Db\DbAccessHelper.vb" />
+    <Compile Include="Db\Impl\DaoEachFeatureImpl.vb" />
+    <Compile Include="Db\Impl\DaoEachTableImpl.vb" />
+    <Compile Include="Db\LinkServerSql.vb" />
+    <Compile Include="Db\SelectionField.vb" />
+    <Compile Include="Db\Sql\Expression.vb" />
+    <Compile Include="Db\Sql\PostfixNotation.vb" />
+    <Compile Include="Db\LockTimeoutException.vb" />
+    <Compile Include="Db\Sys\Dao\InformationSchemaColumnsDao.vb" />
+    <Compile Include="Db\Sys\Vo\Helper\InformationSchemaColumnsVoHelper.vb" />
+    <Compile Include="Db\Sys\Vo\InformationSchemaColumnsVo.vb" />
+    <Compile Include="Db\RecordNotFoundException.vb" />
+    <Compile Include="Db\Sql\SqlBindUtil.vb" />
+    <Compile Include="Db\Sql\SqlWhitespaceCleaner.vb" />
+    <Compile Include="Db\Sql\XmlInequality.vb" />
+    <Compile Include="Db\DbClient.vb" />
+    <Compile Include="Db\DatabaseException.vb" />
+    <Compile Include="Db\Sql\SqlParameter.vb" />
+    <Compile Include="Db\SqlUtil.vb" />
+    <Compile Include="Db\Sql\ExpressionOld.vb" />
+    <Compile Include="Db\Sql\ISqlExpressionEvaluator.vb" />
+    <Compile Include="Db\Sql\SqlAnalyzer.vb" />
+    <Compile Include="Db\Sql\SqlBindAnalyzer.vb" />
+    <Compile Include="Db\Sql\XmlCDataEncloser.vb" />
+    <Compile Include="Db\Sql\SqlExpressionEvaluator.vb" />
+    <Compile Include="Db\Sql\SqlXmlAnalyzer.vb" />
+    <Compile Include="Db\TableExclusion.vb" />
+    <Compile Include="Db\TableExclusionException.vb" />
+    <Compile Include="Domain\CollectionJudgeerObject.vb" />
+    <Compile Include="Domain\CollectionObject.vb" />
+    <Compile Include="Domain\CollectionValueObject.vb" />
+    <Compile Include="Domain\Entity.vb" />
+    <Compile Include="Domain\ICollectionObject.vb" />
+    <Compile Include="Domain\PrimitiveValueObject.vb" />
+    <Compile Include="Domain\ValueObject.vb" />
+    <Compile Include="DotNetUtil.vb" />
+    <Compile Include="EnumUtil.vb" />
+    <Compile Include="Lang\Threading\Runnable.vb" />
+    <Compile Include="EzUtil.vb" />
+    <Compile Include="FileUtil.vb" />
+    <Compile Include="Lang\Threading\Volatile.vb" />
+    <Compile Include="NetworkUtil.vb" />
+    <Compile Include="PathUtil.vb" />
+    <Compile Include="SystemDate.vb" />
+    <Compile Include="BaseException.vb" />
+    <Compile Include="StringUtil.vb" />
+    <Compile Include="AssemblyUtil.vb" />
+    <Compile Include="Sys\ComFunc\User.vb" />
+    <Compile Include="Sys\EBomIni.vb" />
+    <Compile Include="Sys\Executer.vb" />
+    <Compile Include="Sys\FwSetup.vb" />
+    <Compile Include="Sys\Log4NetConfigurator.vb" />
+    <Compile Include="Sys\PrivateProfile.vb" />
+    <Compile Include="Sys\PrivateProfileHelper.vb" />
+    <Compile Include="Sys\SystemException.vb" />
+    <Compile Include="Lang\Threading\AThread.vb" />
+    <Compile Include="Util\AbstractImmutablePair.vb" />
+    <Compile Include="Util\Barcode\Code39Barcode.vb" />
+    <Compile Include="Util\ChangeJudgeer.vb" />
+    <Compile Include="Util\Concurrent\AbstractExecutorService.vb" />
+    <Compile Include="Util\Concurrent\ArrayBlockingQueue.vb" />
+    <Compile Include="Util\Concurrent\Callable.vb" />
+    <Compile Include="Util\Concurrent\CancellationException.vb" />
+    <Compile Include="Util\Concurrent\ExecutionException.vb" />
+    <Compile Include="Util\Concurrent\Executor.vb" />
+    <Compile Include="Util\Concurrent\Executors.vb" />
+    <Compile Include="Util\Concurrent\ExecutorService.vb" />
+    <Compile Include="Util\Concurrent\Future.vb" />
+    <Compile Include="Util\Concurrent\FutureTask.vb" />
+    <Compile Include="Util\Concurrent\IBlockingQueue.vb" />
+    <Compile Include="Util\Concurrent\RunnableFuture.vb" />
+    <Compile Include="Util\Concurrent\ThreadFactory.vb" />
+    <Compile Include="Lang\Threading\ThreadLocal.vb" />
+    <Compile Include="Util\Concurrent\TimeUnit.vb" />
+    <Compile Include="Util\Concurrent\Promise.vb" />
+    <Compile Include="Util\Fixed\FixedDecorator.vb" />
+    <Compile Include="Util\LruCache.vb" />
+    <Compile Include="Util\RandomStringBuilder.vb" />
+    <Compile Include="Util\SequencedDictionary.vb" />
+    <Compile Include="Util\VoCopy\IVoCopyPropertyDefine.vb" />
+    <Compile Include="Util\VoCopy\VoCopyProperty.vb" />
+    <Compile Include="Util\Csv\CsvReader.vb" />
+    <Compile Include="Util\Csv\CsvRule.vb" />
+    <Compile Include="Util\Csv\CsvRuleBuilder.vb" />
+    <Compile Include="Util\Csv\CsvRuleProperty.vb" />
+    <Compile Include="Util\Csv\CsvVoBroker.vb" />
+    <Compile Include="Util\Csv\CsvWriter.vb" />
+    <Compile Include="Util\Csv\ICsvRule.vb" />
+    <Compile Include="Util\Csv\ICsvRuleLocator.vb" />
+    <Compile Include="Util\Comparer\IntegerDescComparer.vb" />
+    <Compile Include="Util\Fixed\AbstractFixedDefine.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedRule.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedVoBroker.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedRuleProperty.vb" />
+    <Compile Include="Util\Fixed\Extend\FixedRuleBuilder.vb" />
+    <Compile Include="Util\Fixed\Extend\IFixedRule.vb" />
+    <Compile Include="Util\Fixed\Extend\IFixedRuleLocator.vb" />
+    <Compile Include="Util\Fixed\FixedField.vb" />
+    <Compile Include="Util\Fixed\FixedGroupHelper.vb" />
+    <Compile Include="Util\Fixed\FixedNumber.vb" />
+    <Compile Include="Util\Fixed\IFixedEntry.vb" />
+    <Compile Include="Util\Fixed\FixedGroup.vb" />
+    <Compile Include="Util\Grouping\VoGrouping.vb" />
+    <Compile Include="Util\Grouping\IVoGroupingLocator.vb" />
+    <Compile Include="Util\Grouping\IVoGroupingRule.vb" />
+    <Compile Include="Util\Grouping\VoGroupingRule.vb" />
+    <Compile Include="Util\IIndexedList.vb" />
+    <Compile Include="Util\IndexedList.vb" />
+    <Compile Include="Util\IPredicate.vb" />
+    <Compile Include="Util\LabelValue\ILabelValueRule.vb" />
+    <Compile Include="Util\LabelValue\LabelValueComparer.vb" />
+    <Compile Include="Util\LabelValue\LabelValueExtracter.vb" />
+    <Compile Include="Util\LabelValue\ILabelValueBaseLocator.vb" />
+    <Compile Include="Util\LabelValue\ILabelValueLocator.vb" />
+    <Compile Include="Util\LabelValue\LabelValueRule.vb" />
+    <Compile Include="Util\LabelValue\LabelValueVo.vb" />
+    <Compile Include="Util\NameGetter.vb" />
+    <Compile Include="Util\Observable.vb" />
+    <Compile Include="Util\Observer.vb" />
+    <Compile Include="Util\DecamelizedPropertyAccessor.vb" />
+    <Compile Include="Util\OperationParser.vb" />
+    <Compile Include="Util\Search\BMSearch.vb" />
+    <Compile Include="Util\ShortcutFile.vb" />
+    <Compile Include="Util\SimpleTimeoutCache.vb" />
+    <Compile Include="Util\SynchronizedIndexedList.vb" />
+    <Compile Include="Util\TimeoutDictionary.vb" />
+    <Compile Include="Util\ToStringBuilder.vb" />
+    <Compile Include="TypeUtil.vb" />
+    <Compile Include="Util\VoPropertyMarker.vb" />
+    <Compile Include="Util\WorkerThread\Channel.vb" />
+    <Compile Include="Util\WorkerThread\ITask.vb" />
+    <Compile Include="Util\WorkerThread\WorkerThread.vb" />
+    <Compile Include="VoUtil.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OsUtil.vb" />
+    <Compile Include="App\Web\RequestUtil.vb" />
+    <Compile Include="XmlUtil.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
